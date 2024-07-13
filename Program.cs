@@ -38,7 +38,7 @@ namespace DerrySucks
                     else if (user_input == numbr)
                     {
                         lives = -1; // So nothing gets printed (very simple fix)
-                        Win();
+                        Win(numbr);
                     }
                 }
                 catch (FormatException)
@@ -49,12 +49,15 @@ namespace DerrySucks
             if (lives == 0)
             {
                 Console.WriteLine("Awww! You ran out of lives!");
+                Thread.Sleep(1000);
                 Console.WriteLine($"The number was: {numbr}!");
             }
         }
-        static void Win()
+        static void Win(int numbr)
         {
             Console.WriteLine("No way you won!");
+            Thread.Sleep(1000);
+            Console.WriteLine($"The number was: {numbr}!");
         }
     }
 }
