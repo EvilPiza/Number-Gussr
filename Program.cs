@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DerrySucks
 {
@@ -36,16 +37,23 @@ namespace DerrySucks
                     }
                     else if (user_input == numbr)
                     {
-                        Console.WriteLine("No way you won!!");
+                        Win();
                     }
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine($"Your input was not a number.");
+                    Console.WriteLine($"Your input was not a number."); // this doesn't work for some reason. if you know derry lmk.
                 }
-
-
             }
+            if (lives == 0)
+            {
+                Console.WriteLine("Awww! You ran out of lives!");
+                Console.WriteLine($"The number was: {numbr}!");
+            }
+        }
+        static void Win()
+        {
+            Console.WriteLine("No way you won!");
         }
     }
 }
