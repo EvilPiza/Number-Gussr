@@ -7,13 +7,13 @@ namespace DerrySucks
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
+            Random random = new();
 
             int numbr = random.Next(1, 50); // THE TYPO IS ON PURPOSE DERRY
 
             int lives = 5;
 
-            while (lives != 0)
+            while (lives > 0)
             {
                 Console.WriteLine("What's your guess?");
 
@@ -37,6 +37,7 @@ namespace DerrySucks
                     }
                     else if (user_input == numbr)
                     {
+                        lives = -1; // So nothing gets printed (very simple fix)
                         Win();
                     }
                 }
