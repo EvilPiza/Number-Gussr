@@ -1,1 +1,1 @@
-The .py file is a standalone file and is the python version of the game, everything else is the C# version.
+The .py is Python (obviously) and the .cs is C#. (also very obvious)
