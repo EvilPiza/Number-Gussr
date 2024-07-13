@@ -1,4 +1,4 @@
-# Guess That Number
+# Number Gussr
 
 import random
 
@@ -107,10 +107,3 @@ print(" ")
 ok = int(input("mode: "))
 
 number_guess_game(ok)
-
-# Extra Info/Tips
-
-# If you every see a hint above the range, thats perfectly normal, the actual number can never be above the maximum 
-# for that mode.
-
-# NEVER use space when putting in answers, it will cause the code to send an error.
